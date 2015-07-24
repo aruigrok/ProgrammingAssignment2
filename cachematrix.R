@@ -12,7 +12,6 @@
 # get the value of the mean
 
 ## This function creates a special "matrix" object that can cache its inverse.
-
 # a matrix can be created by using matrix()
 # e.g. a <- matrix(1:4, 2, 2) - numbers, nrow, ncol
 
@@ -36,7 +35,7 @@ makeCacheMatrix <- function(x = numeric()) {
         # variable where the cached inverse matrix is stored
         setSolve <- function(solve) m <<- solve
         
-        # getmean() calls the variable stored in setSolve
+        # getSolve() calls the variable stored in setSolve
         getSolve <- function() m
         
         # all above variables are stored in a list as part of MakeCacheMatrix
@@ -46,9 +45,8 @@ makeCacheMatrix <- function(x = numeric()) {
 }
 
 
-## Write a short comment describing this function
 
-## This function computes the inverse of the special "matrix" returned by 
+## cacheSolve computes the inverse of the special "matrix" returned by 
 ## makeCacheMatrix. If the inverse has already been calculated (and the matrix 
 ## has not changed), then the cachesolve should retrieve the inverse from 
 ## the cache.
@@ -78,3 +76,4 @@ cacheSolve <- function(x, ...) {
         # return m
         m
 }
+
